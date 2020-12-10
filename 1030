@@ -1,0 +1,14 @@
+nc = int(input())
+
+
+def kawai2(a, b):
+    rest = 0
+    for temp in range(1, a + 1):
+        rest = (rest + b) % temp
+    return rest
+
+
+for x in range(nc):
+    n, k = map(int, input().split())
+
+    print("Case %d: %d" % (x+1, kawai2(n,k)+1))
