@@ -1,0 +1,17 @@
+c = int (input("Digite o numero de casos : "))
+
+while c > 0 :
+    c = c - 1
+    n1, operador, n2, espaço, resultado = input().split()
+    n1 = int(n1)
+    n2 = int (n2)
+
+    if operador == "+" :
+        resultadoReal = n1 + n2
+    elif operador == "-" :
+        resultadoReal = n1 - n2
+    else :
+        resultadoReal = n1 * n2
+
+    errou = "r" * abs(resultadoReal - int(resultado))
+    print ("E{}ou!".format(errou))
